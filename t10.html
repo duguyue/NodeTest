@@ -6,20 +6,20 @@
     <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
 </head>
 <body>
-    <div ng-app="myApp" ng-controller="myCtrl">
+<div ng-app="myApp" ng-controller="myCtrl">
     {{hex}}
-    </div>
+</div>
 
-    <script>
-        var app=angular.module('myApp',[]);
-        app.service('hexafy',function () {
-            this.myFunc=function (x) {
-                return x.toString(16);
-            }
-        });
-        app.controller('myCtrl',function ($scope,hexafy) {
-            $scope.hex=hexafy.myFunc(255);
-        })
-    </script>
+<script>
+    var app = angular.module('myApp', []);
+    app.service('hexafy', function () {
+        this.myFunc = function (x) {
+            return x.toString(16);
+        }
+    });
+    app.controller('myCtrl', function ($scope, hexafy) {
+        $scope.hex = hexafy.myFunc(255);
+    })
+</script>
 </body>
 </html>
